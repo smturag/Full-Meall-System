@@ -1,0 +1,20 @@
+   {{-- <div class="availableDate">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#aDate"
+                aria-expanded="false" aria-controls="insertDate">
+                Inserted Date
+            </button>
+            <div class="collapse" id="aDate">
+                <div class="card card-body">
+                    <form action="{{route('addYm')}}" method="post">
+                        {{ csrf_field() }}
+                        
+                       
+                        <button type="submit" class="btn btn-dark">Dark</button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div> --}}
