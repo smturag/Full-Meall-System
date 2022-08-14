@@ -50,21 +50,17 @@ class MealStorageController extends Controller
         function GetMonthYear($YM){
             foreach($YM as $ym){
                 $yearMonth[]=[
-                    'ymId'=> $ym->id,
+                    'ymId'=> $ym->ym_id,
                     'month'=> date('F', mktime(0, 0, 0,substr($ym->year_month,5,-3), 10)),
-                    'year'=> substr($ym->year_month,0,-6),
-
-    
-                ];
-              
+                    'year'=> substr($ym->year_month,0,-6),    
+                ];      
 
             }
             return $yearMonth;
-           
 
         }
       $yearMonth =   GetMonthYear($allYM);
-        return view('layouts._addMealSheet',compact('yearMonth'));
+      return view('layouts._addMealSheet',compact('yearMonth'));
     }
     public function view_sheet(){
         return view('layouts._viewMealChart');

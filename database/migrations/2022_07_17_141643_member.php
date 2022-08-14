@@ -17,9 +17,10 @@ class Member extends Migration
             $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
             $table->id('member_id');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->unsignedBigInteger('monthYear');
             $table->foreign('monthYear')->references('ym_id')->on('year_months')->onDelete('cascade');
+            $table->unique(['name','monthYear']);
 
         });
     }
